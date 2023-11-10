@@ -1,0 +1,14 @@
+<%- include('../partials/head')%>
+
+<%- include('../partials/navbar')%>
+<h2 class="text-center text-success" style="margin-bottom: 10px;">Add a new Post!</h2>
+<div class="d-flex justify-content-center align-items-center">
+    <form action="/tweets" method="POST">
+        <%- include('../partials/postForm')%>
+        <div class="d-grid gap-2 d-md-block" style="margin: 50px 0 0 10px;">
+            <button type="submit" class="btn btn-primary">Post</button>
+            <a href="/tweets"><button type="button" class="btn btn-danger" style="margin-left: 10px;">Cancel</button></a>
+          </div> 
+    </form>
+</div>
+<%- include('../partials/footer')%>

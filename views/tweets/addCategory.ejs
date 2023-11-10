@@ -1,0 +1,14 @@
+<%- include('../partials/head')%>
+
+<%- include('../partials/navbar')%>
+<div class="div" style="margin-left: 15px;">
+    <h2>Feel free to add a category!</h2>
+    <form action="/tweets/categories" method="post" style="margin-top: 20px;">
+        <label for="categoryName">Category Name:</label>
+        <input type="text" id="categoryName" name="categoryName" required>
+        <button type="submit" class="btn btn-primary btn-sm" id="addCategoryBtn" >Save Category</button>
+    </form>
+        <a href="/tweets/categories"><button type="button" class="btn btn-secondary" style="margin-top: 20px;">Go to Categories</button></a>
+</div>
+    
+<%- include('../partials/footer')%>

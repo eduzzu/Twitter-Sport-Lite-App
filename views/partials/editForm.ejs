@@ -1,0 +1,18 @@
+<div class="mb-3" style="margin-left: 10px; width: 500px;">
+    <label for="author" class="form-label" >Author:</label>
+    <input type="text" class="form-control" id="author" name="author" value="<%=post.author %>">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" class="form-control" id="title" name="title" value="<%=post.title %>">
+  </div>
+  <div class="mb-3" style="margin-left: 10px;" >
+    <label for="text" class="form-label">Text:</label>
+    <textarea class="form-control" id="text" name="text" rows="5" style="width: 600px;"><%=post.text %></textarea>
+  </div>
+  <div class="div" style="margin-left: 10px;">
+    <label for="category">Category:</label>
+    <select id="category" name="category" class="form-select" style="width: fit-content;">
+        <% for(let category of categories) {%>
+            <option value="<%=category%>" <%=post.category === category ? 'selected': '' %>><%=category%></option>
+            <% }%>
+    </select>
+  </div>

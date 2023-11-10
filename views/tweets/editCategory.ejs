@@ -1,0 +1,16 @@
+<%- include('../partials/head')%>
+
+<%- include('../partials/navbar')%>
+
+<div class="div" style="margin-left: 15px;">
+    <h2>Edit Category:</h2>
+
+    <form action="/tweets/categories<%= post.category %>?_method=PUT" method="POST">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="newCategoryName" value="<%= post.category %>">
+        <button type="submit" class="btn btn-primary btn-sm" style="padding: 4px 20px;">Update</button>
+    </form>
+    <a href="/tweets/categories"><button type="button" class="btn btn-secondary" style="margin-top: 20px;">Go to Categories</button></a>
+</div>   
+
+    <%- include('../partials/footer') %>

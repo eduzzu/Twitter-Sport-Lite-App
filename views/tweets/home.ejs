@@ -1,0 +1,19 @@
+<%- include('../partials/head')%>
+
+<%- include('../partials/navbar')%>
+<title>Home</title>
+<h2 class="text-center text-success" style="margin-bottom: 10px;">Start seeing all the posts that matter to you.</h2>
+    <ul class="list-group" style="height: fit-content ;">
+       <% for(let post of posts){ %>
+            <li class="list-group-item list-group-item-success" style="width: 98%; margin-left: 15px;"><a class="link-danger" style="text-decoration: none;" href="/tweets/<%=post._id %>" ><%= post.title %></a> - <b><%= post.author  %> - <i><a style="color:chocolate; text-decoration: none;" href="/tweets?category=<%= post.category %>"><%= post.category%></a></i></b></li>
+                <br>
+        <% } %>
+    </ul>
+    <% if(category !== 'All'){ %>
+        <a href="/tweets">All Posts</a>
+        <a href="/tweets/editCategory">Edit Category</a>
+        <% } %>
+   
+<%- include('../partials/footer') %>
+
+
